@@ -1,0 +1,11 @@
+--- git/psplash.c	2016-12-16 14:19:03.486511977 +0100
++++ psplash.c	2016-12-16 14:19:47.494712494 +0100
+@@ -303,7 +303,7 @@
+ 	  ret = -1;
+ 	  goto fb_fail;
+   }
+-
++  fb->height = 342;
+   /* Clear the background with #ecece1 */
+   psplash_fb_draw_rect (fb, 0, 0, fb->width, fb->height,
+                         PSPLASH_BACKGROUND_COLOR);

@@ -1,0 +1,9 @@
+[Unit]
+Description=M53
+
+[Service]
+ExecStart=/usr/bin/m53
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

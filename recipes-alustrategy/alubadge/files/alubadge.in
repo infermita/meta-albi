@@ -1,0 +1,43 @@
+#!/bin/sh
+#
+# start/stop alubadge daemon.
+
+
+DAEMON=@installpath@/alubadge
+PIDFILE=/var/run/alubadge.pid
+DESC="Linux ALUBADGE daemon"
+
+set -e
+
+do_start() {
+	start-stop-daemon --start --background -m --oknodo --pidfile $PIDFILE --exec $DAEMON
+}
+
+do_stop() {
+	start-stop-daemon --stop --quiet --oknodo --pidfile $PIDFILE 
+}
+
+case "$1" in
+  start)
+	echo -n "Starting $DESC"
+	do_start
+	echo "."
+	;;
+  stop)
+	echo -n "Stopping $DESC"
+	do_stop
+	echo "."
+	;;
+  restart|force-reload)
+	echo "Restarting $DESC"
+	do_stop
+	sleep 1
+	do_start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

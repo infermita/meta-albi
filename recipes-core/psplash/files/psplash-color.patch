@@ -1,0 +1,11 @@
+--- git/psplash-colors.h 2017-01-20 13:02:22.450921716 +0100
++++ psplash-colors.h	2017-01-20 13:18:36.305101591 +0100
+@@ -20,7 +20,7 @@
+ #define _HAVE_PSPLASH_COLORS_H
+ 
+ /* This is the overall background color */
+-#define PSPLASH_BACKGROUND_COLOR 0xec,0xec,0xe1
++#define PSPLASH_BACKGROUND_COLOR 0xff,0xff,0xff
+ 
+ /* This is the color of any text output */
+ #define PSPLASH_TEXT_COLOR 0x6d,0x6d,0x70

@@ -1,0 +1,10 @@
+[Unit]
+Description=Condis
+After=network.target 
+
+[Service]
+ExecStart=/usr/bin/confdis -platform linuxfb
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

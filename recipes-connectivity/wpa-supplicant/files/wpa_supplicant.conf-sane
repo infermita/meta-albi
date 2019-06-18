@@ -1,0 +1,20 @@
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=0
+update_config=1
+
+network={
+	ssid="Ohana_EXT"
+	#psk="sofia15082011"
+	psk=6cae455e36ed929ee5596079a04ade9ea8ee08898533f6a9efbc7ac65beadff2
+}
+
+network={
+	ssid="Geco_WiFi"
+	#psk="Gecowifi0"
+	psk=97815f40cef8641c0ab03a57a14d0156517ff6e0c86980499567812a54faea2b
+}
+network={
+	ssid="Produzione"
+	#psk="A@631Cd@@"
+	psk=a0ca87f576796ff37c61af156960bed8b02f1fb143cf6f0ecf16d54408bed49d
+}
